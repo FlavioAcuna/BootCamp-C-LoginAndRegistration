@@ -1,0 +1,17 @@
+@model LoginUser
+<div class="col">
+    <h1>Iniciar Sesion</h1>
+    <form asp-action="ValidaUser" asp-controller="Home" method="post">
+        <div class="row form-group">
+            <label asp-for="Email">Email: </label>
+            <input asp-for="Email" class="form-control">
+            <span asp-validation-for="Email"></span>
+        </div>
+        <div class="row form-group">
+            <label asp-for="Password">Contraseña: </label>
+            <input asp-for="Password" class="form-control">
+            <span asp-validation-for="Password"></span>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Iniciar Sesion</button>
+    </form>
+</div>
